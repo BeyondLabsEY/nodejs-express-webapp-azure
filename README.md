@@ -39,21 +39,23 @@ console.log('Server Listening at port '+port);
 
 npm start
 
+# Azure Web App Deployment
+
 Check the URL and test the routes. If everything is fine, it's time to deploy to Azure Web App.
 Here, https://docs.microsoft.com/pt-br/azure/app-service/app-service-web-get-started-nodejs,  are the detailed commands to create the Web App.
 
 Let's summarize:
 
-# Create the Resource Group
+## Create the Resource Group
 ```az group create --name myResourceGroup --location "West Europe"```
 
-# Create the App Service Plan 
+## Create the App Service Plan 
 ```az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku FREE```
 
-# Create the Web App
+## Create the Web App
 ```az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app_name> --runtime "NODE|6.9"```
 
-# Deployment
+## Deployment
 Zip all files of project, including the "node_modules", then use the Kudu, Zip Deployment,```https://<app_name>.scm.azurewebsites.net/ZipDeploy```, and drag the Zip file.
 
 Check the routes, the root and "teste".
