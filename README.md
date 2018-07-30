@@ -10,7 +10,7 @@ Fork it on https://github.com/Azure-Samples/nodejs-docs-hello-world.
 
 ## Install Express
 
-npm install express
+```npm install express```
 
 ## Edit the index.js and create some routes
 
